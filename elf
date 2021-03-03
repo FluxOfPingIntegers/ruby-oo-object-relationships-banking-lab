@@ -1,0 +1,19 @@
+
+[1mFrom:[0m /mnt/c/Users/punkz/development/code/mod1/ruby-oo-object-relationships-banking-lab/lib/transfer.rb @ line 29 Transfer#execute_transaction:
+
+    [1;34m23[0m: [32mdef[0m [1;34mexecute_transaction[0m
+    [1;34m24[0m:   [32mif[0m (@sender.balance - @amount) < [1;34m0[0m
+    [1;34m25[0m:     @status=([31m[1;31m"[0m[31mTransaction rejected. Please check your account balance.[1;31m"[0m[31m[0m)
+    [1;34m26[0m:   [32melsif[0m [1;36mself[0m.valid?
+    [1;34m27[0m:     money_to = [1;34m0[0m + @amount
+    [1;34m28[0m:     money_from = [1;34m0[0m - @amount
+ => [1;34m29[0m:     binding.pry
+    [1;34m30[0m:     @sender.deposit(money_from)
+    [1;34m31[0m:     @receiver.deposit(money_to)
+    [1;34m32[0m:     @status=([31m[1;31m"[0m[31mcomplete[1;31m"[0m[31m[0m)
+    [1;34m33[0m:   [32melse[0m
+    [1;34m34[0m:     @status=([31m[1;31m"[0m[31mrejected[1;31m"[0m[31m[0m)
+    [1;34m35[0m:   [32mend[0m
+    [1;34m36[0m:   @status
+    [1;34m37[0m: [32mend[0m
+
